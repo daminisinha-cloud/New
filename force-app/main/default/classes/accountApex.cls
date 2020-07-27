@@ -16,7 +16,8 @@ public class accountApex {
     }
     @AuraEnabled
     public static Contact deleteContact(Contact contact) {
-        delete contact;
+        System.debug(" Test123");
+        delete  contact;
         return contact;
     }
     @AuraEnabled
@@ -26,6 +27,7 @@ public class accountApex {
         List<Contact> contactList = new List<Contact>();
         List<fieldWrapper> datalist = (List<fieldWrapper>) JSON.deserialize(strfromlex, List<fieldWrapper>.class);
         system.debug('@@@ datalistSize = ' + datalist.size());
+        System.debug("Test123");
         for(fieldWrapper wrapper: datalist)
         {
             Contact acc =new  Contact();
